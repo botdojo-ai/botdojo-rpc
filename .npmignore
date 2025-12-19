@@ -1,0 +1,10 @@
+src/
+tsconfig.json
+tsup.config.ts
+.eslintrc.js
+.turbo/
+*.test.ts
+*.spec.ts
+AGENTS.md
+node_modules/
+.DS_Store
