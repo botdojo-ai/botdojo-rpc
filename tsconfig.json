@@ -1,25 +1,20 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
-    "noImplicitReturns": false,
-    "noUnusedLocals": false,
-    "outDir": "lib",
+    "target": "ES2019",
+    "module": "ESNext",
+    "lib": ["ES2019"],
+    "declaration": true,
+    "outDir": "./dist",
     "sourceMap": true,
     "strict": false,
-    "target": "es2017",
-    "composite": true,
-    "declaration": true,
-    "declarationMap": true,
+    "esModuleInterop": true,
     "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
-"esModuleInterop": true 
-
+    "moduleResolution": "node",
+    "noImplicitReturns": false,
+    "noUnusedLocals": false
   },
-
-  "compileOnSave": true,
-  "include": [
-    "src/**/*",
-    "package.json" // <---
-  ],
- 
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist", "lib", "**/*.test.ts", "**/*.spec.ts"]
 }
