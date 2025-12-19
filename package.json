@@ -1,61 +1,26 @@
 {
-  "name": "botdojo-rpc",
-  "version": "0.1.0",
-  "description": "RPC and PostMessage communication primitives for BotDojo",
-  "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.js"
+    "name": "botdojo-rpc",
+    "version": "0.0.0",
+    "license": "MIT",
+    "main": "lib/src/index.js",
+    "types": "lib/src/index.d.ts",
+    "scripts": {
+        "build": "tsc",
+        "dev": "tsc --watch",
+        "test": "NODE_OPTIONS=--experimental-vm-modules jest --verbose --coverage ",
+        "tsup": "tsup src/index.ts --dts --format cjs --out-dir tsup --target node18",
+        "lint": "eslint src/"
+    },
+    "devDependencies": {
+        "typescript": "5.4.5"
+    },
+    "dependencies": {
+        "@types/minimatch": "^5.1.2"
+    },
+    "peerDependencies": {
+
+    },
+    "peerDependenciesMeta": {
+      
     }
-  },
-  "files": [
-    "dist",
-    "README.md",
-    "LICENSE"
-  ],
-  "scripts": {
-    "build": "tsup",
-    "dev": "tsup --watch",
-    "clean": "rm -rf dist",
-    "typecheck": "tsc --noEmit",
-    "lint": "eslint src --ext .ts",
-    "prepublishOnly": "pnpm build"
-  },
-  "dependencies": {
-    "@types/minimatch": "^5.1.2"
-  },
-  "devDependencies": {
-    "tsup": "^8.0.0",
-    "typescript": "5.4.5"
-  },
-  "keywords": [
-    "rpc",
-    "postmessage",
-    "communication",
-    "iframe",
-    "botdojo",
-    "websocket",
-    "realtime"
-  ],
-  "author": {
-    "name": "BotDojo",
-    "url": "https://botdojo.com"
-  },
-  "license": "MIT",
-  "homepage": "https://github.com/botdojo/rpc",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/botdojo/rpc"
-  },
-  "bugs": {
-    "url": "https://github.com/botdojo/rpc/issues"
-  },
-  "publishConfig": {
-    "access": "public"
-  },
-  "sideEffects": false
 }
